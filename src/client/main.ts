@@ -132,7 +132,7 @@ exportBtn.addEventListener("click", () => {
 });
 
 fetch(
-  `https://raw.githubusercontent.com/genius-invokation/genius-invokation/refs/heads/main/packages/static-data/scripts/mappings/buff_icons.json`,
+  `https://raw.githubusercontent.com/piovium/genius-invokation/refs/heads/main/packages/static-data/scripts/mappings/buff_icons.json`,
 )
   .then((r) => r.json())
   .then((r) => (buffIconMapping = r))
