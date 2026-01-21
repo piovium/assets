@@ -9,7 +9,8 @@
     "build:images": "bun src/node/generate_images.ts $TEXTURE2D_FOLDER",
     "build:thumbs": "bun src/node/generate_thumbs.ts",
     "build:vite": "vite build",
-    "build": "bun build:data && bun build:thumbs && bun build:vite"
+    "build": "bun build:data && bun build:thumbs && bun build:vite",
+    "upload": "bun src/node/upload.ts"
   },
   "imports": {
     "#common/*": "./src/common/*"
