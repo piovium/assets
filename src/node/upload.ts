@@ -10,7 +10,7 @@ const entries = await readdir(publicDir, {
 });
 const filenames = entries
   .filter((entry) => entry.isFile())
-  .map((entry) => entry.name);
+  .map((entry) => path.join(path.relative(publicDir, entry.path), entry.name));
 for (const filename of filenames) {
   console.log(`Uploading ${filename}...`);
   await s3.file(filename).write(Bun.file(path.join(publicDir, filename)));
